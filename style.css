@@ -371,7 +371,6 @@ a {
 
 /* blog section */
 .blog {
-  background: #edede4;
   padding-bottom: 4rem;
 }
 
@@ -382,7 +381,7 @@ a {
   text-align: center;
   background: url(img/blog.jpg) no-repeat center center/cover;
   background-attachment: fixed;
-  margin: 4rem 0;
+  margin: 4rem 0 0;
 }
 
 .blog__flex {
@@ -397,14 +396,16 @@ a {
 }
 
 .blog__content {
+  padding: 4rem 0;
   text-align: center;
+  background: #edede4;
 }
 
 .blog__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 0.5rem;
-  margin: 1rem 6rem;
+  margin: 1rem 6rem 0;
 }
 
 .blog__post {
@@ -434,6 +435,105 @@ a {
 
 .blog__sub {
   font-size: 1.75rem;
+}
+
+/* reviews */
+.reviews {
+  position: relative;
+  color: var(--light-color);
+}
+
+.reviews__container {
+  padding: 5rem;
+  margin: 0 3rem;
+}
+
+.reviews__container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.reviews__container h5,
+.reviews h4 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.reviews__container h3 {
+  font-size: 1.75rem;
+}
+
+.reviews__flex {
+  overflow: hidden;
+  margin: 1rem 3rem;
+}
+
+.reviews__slide {
+  display: flex;
+  transition: all 1s ease-in-out;
+}
+
+.reviews__content {
+  padding: 0.5rem;
+  min-width: 33.3%;
+}
+
+.reviews__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.reviews__video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.reviews__next {
+  position: absolute;
+  right: 7rem;
+  bottom: 40%;
+}
+
+.reviews__prev {
+  position: absolute;
+  left: 6rem;
+  bottom: 40%;
+}
+
+.reviews__next i,
+.reviews__prev i {
+  color: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.reviews__sub {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.reviews__sub::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background: var(--light-color);
+  width: 0.8rem;
+  height: 0.2rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -636,5 +736,29 @@ a {
   .blog__title {
     padding: 1rem 0;
     font-size: 1rem;
+  }
+
+  .reviews__container {
+    padding: 5rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  .current {
+    margin: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .reviews__next {
+    right: 1rem;
+  }
+
+  .reviews__prev {
+    left: 1rem;
+  }
+
+  .reviews__sub::before {
+    left: 38%;
+    top: 50%;
   }
 }

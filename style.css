@@ -12,6 +12,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: var(--dark-color);
@@ -408,7 +412,7 @@ a {
 .blog .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
   margin: 1rem 6rem 0;
 }
 
@@ -709,7 +713,7 @@ a {
   }
   .service .featuers-list {
     order: 2;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     text-align: center;
     width: 100%;
     margin: 2rem auto;
@@ -800,7 +804,7 @@ a {
   .showcase .cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     margin-top: 5rem;
   }
   .showcase .card {
@@ -843,7 +847,7 @@ a {
   }
   .service .featuers-list {
     order: 2;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     text-align: center;
     width: 100%;
     margin: 2rem auto;
@@ -870,7 +874,7 @@ a {
   /* blog */
 
   .blog .blog-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
     margin: 1rem 0;
   }
 
@@ -905,6 +909,6 @@ a {
   /* footer */
 
   .contact .contact-info {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
   }
 }
